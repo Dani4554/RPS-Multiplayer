@@ -1,0 +1,51 @@
+#header{
+
+}
+
+#title{
+
+}
+
+#mainContainer{
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+#firstRow{
+	height: 80px;
+	position: relative;
+	top: 90px;
+}
+
+#secondRow{
+	height: 80px;
+	position: relative;
+	top: 90px;
+}
+
+#first-display{
+	height: 100px;
+	width: 100px;
+	border-color: black;
+	border-width: 10px;
+	border-style: outset;
+
+}
+
+#second-display{
+	height: 100px;
+	width: 100px;
+	border-color: black;
+	border-width: 10px;
+	border-style: outset;
+}
+
+#conversation{
+	height: 150px;
+	width: 300px;
+	border-color: black;
+	border-width: 10px;
+	border-style: outset;
+
+}
