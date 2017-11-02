@@ -170,13 +170,14 @@ var assignPlayer = function(key) {
    
    });
    
-   };
+  };
 
 
  //Initial Values
 var connections = database.ref("/connections");
 var players = database.ref("/players");
 var connectedRef = database.ref(".info/connected");
+var convo = database.ref("/conversation");
 var name;
 var key;
 var key2;
@@ -215,6 +216,35 @@ connectedRef.on("value", function(snap){
       });
 
     } 
+});
+
+
+$("#chat-button").on("click", () =>{
+  event.preventDefault();
+
+  var text = $("#chat").val().trim();
+
+  var key = convo.push(text);
+
+  database.ref("/conversation").on("value", (snap) => {
+
+      value = key.key;
+
+       var text1 = snap.val()[value];
+
+      console.log("The value is:");
+      console.log(value);
+
+      console.log("The snapshot of the conversation: ");
+      console.log(text1);
+
+      $("#display-chat").append(`<h3>${text1}</h3>`);
+      
+    
+    });
+
+  console.log("Key is:");
+  console.log(key);
 });
 
 
